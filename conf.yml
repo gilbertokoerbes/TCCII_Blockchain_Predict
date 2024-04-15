@@ -1,0 +1,30 @@
+TransactionFields: #Bytes
+  H4 : 64
+  S4 : 256 
+  P4 : 256
+  R4 : 128
+  E4 : 512
+
+BlockchainParameters:
+  BatchTimeout: 600 #Seconds
+  BatchSize:      
+    MaxMessageCount: 100000
+    AbsoluteMaxBytes: 10485760 # Bytes
+  GenesisBlockSize: 0 # Bytes
+  Block:
+    HeaderSize: 128
+    MetadataSize: 64
+  TPS: 10
+
+
+Cloud:
+  VirtualMachine:
+    Pricing: 0.224
+    Utilization:  730 # Hours
+  Storage:
+    Pricing: 0.08
+  NetworkThroughput:
+    Pricing: 0.045
+  Additional: 0 # Billing Values
+  
+Predict: 10 # Years
