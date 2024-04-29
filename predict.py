@@ -34,6 +34,7 @@ class blockchain_predict:
         self.total_blocks = self.calculate_total_blocks(self.x_period, self.batch_timeout)
 
 
+
     def calculate_transaction_size(self, transation_fields: list) -> int:
         self.transation_size = transation_fields['H4'] + transation_fields['S4'] + transation_fields['P4'] + transation_fields['R4'] + transation_fields['E4']
         return self.transation_size
@@ -71,6 +72,8 @@ class blockchain_predict:
         # Informações adicionais
         self.total_blocks = (x_period * 31536000) / batch_timeout
         return self.total_blocks
+    def calculate_block_headers_size(self) -> int:
+        return self.block_header_size + self.block_metadata_size
 
 class cost_predict:
     def load_config(self):
@@ -96,6 +99,13 @@ class cost_predict:
                     (blockchain_size_gb * network_throughput_pricing ) + additional
         return self.custo_mensal
 
+class StorageDemand:
+    def __init__(self):
+        self.total_blocks = 0
+        self.total_transactions = 0
+        self.calculated_total_size_blocks = 0
+        self.batch_type = ""
+        self.period = 0
 
 
 
