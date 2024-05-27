@@ -75,29 +75,28 @@ class blockchain_predict:
     def calculate_block_headers_size(self) -> int:
         return self.block_header_size + self.block_metadata_size
 
-class cost_predict:
+class CostPredict:
     def load_config(self):
         global CONF
         if CONF == None:
             with open('conf.yml', 'r') as file:
                 CONF = list(yaml.safe_load_all(file))[0]
         
-    def __init__(self, blockchain_size_gb):
+    def __init__(self, blockchain_size_gb = 0):
         self.load_config()
-        self.vm_pricing                  = CONF['Cloud']['VirtualMachine']['Pricing']
-        self.vm_pricing                  = CONF['Cloud']['VirtualMachine']['Pricing']
-        self.vm_utilization              = CONF['Cloud']['VirtualMachine']['Utilization']
+        self.vm_pricing_hours            = CONF['Cloud']['VirtualMachine']['Pricing']
+        self.vm_vcpu                     = CONF['Cloud']['VirtualMachine']['VCPU']
         self.storage_pricing             = CONF['Cloud']['Storage']['Pricing']
         self.network_throughput_pricing  = CONF['Cloud']['NetworkThroughput']['Pricing']
         self.additional                  = CONF['Cloud']['Additional']
 
-        self.custo_mensal = self.total_cost_month(self.vm_utilization, self.vm_pricing, self.storage_pricing, self.network_throughput_pricing, self.additional, blockchain_size_gb)
+    #     self.custo_mensal = self.total_cost_month(self.vm_utilization, self.vm_pricing_hours, self.storage_pricing, self.network_throughput_pricing, self.additional, blockchain_size_gb)
 
-    def total_cost_month(self, vm_utilization, vm_pricing, storage_pricing, network_throughput_pricing, additional, blockchain_size_gb):
-        self.custo_mensal = (vm_utilization  * vm_pricing)      + \
-                    (blockchain_size_gb * storage_pricing)     + \
-                    (blockchain_size_gb * network_throughput_pricing ) + additional
-        return self.custo_mensal
+    # def total_cost_month(self, vm_utilization, vm_pricing_hours, storage_pricing, network_throughput_pricing, additional, blockchain_size_gb):
+    #     self.custo_mensal = (vm_utilization  * vm_pricing_hours)      + \
+    #                 (blockchain_size_gb * storage_pricing)     + \
+    #                 (blockchain_size_gb * network_throughput_pricing ) + additional
+    #     return self.custo_mensal
 
 class StorageDemand:
     def __init__(self):
@@ -111,7 +110,7 @@ class StorageDemand:
 
 if __name__ == '__main__':
     blockchain = blockchain_predict()
-    cost = cost_predict(blockchain.blockchain_size_gb)
+    cost = CostPredict(blockchain.blockchain_size_gb)
     
     objeto_saida = {
         "Custo mensal = " : cost.custo_mensal,

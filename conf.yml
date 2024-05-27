@@ -19,8 +19,8 @@ BlockchainParameters:
 
 Cloud:
   VirtualMachine:
-    Pricing: 0.224
-    Utilization:  730 # Hours
+    Pricing: 0.0388 #C6A.LARGE
+    VCPU: 2
   Storage:
     Pricing: 0.08
   NetworkThroughput:
