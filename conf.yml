@@ -22,7 +22,8 @@ Cloud:
     Pricing: 0.0388 #C6A.LARGE
     VCPU: 2
   Storage:
-    Pricing:  0.10 
+    #Pricing:  0.08 # SSD gp3
+    Pricing:   0.045 # HDD  st1
   NetworkThroughput: # Example PrivateLink
     Pricing: 0.01 # Mean GB
   Additional: 0 # Billing Values
