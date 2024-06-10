@@ -1,2 +1,5 @@
 ploty_examples/
 __pycache__/
+runtime/*
+.ipynb_checkpoints
+venv
