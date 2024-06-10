@@ -1,0 +1,14 @@
+version: "3"
+
+services: 
+  jupyter_lab:
+    container_name: jupyter_lab
+    build: .
+    ports: 
+      - "80:8888"
+    environment: 
+      - JUPYTER_ENABLE_LAB=yes
+    #command: start-notebook.sh --NotebookApp.default_url=/notebooks/predict.ipynb
+    volumes: 
+      - .:/home/jovyan/work
+      #- ./runtime:/home/jovyan/.local/share/jupyter/runtime
