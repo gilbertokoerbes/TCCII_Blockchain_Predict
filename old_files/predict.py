@@ -16,7 +16,7 @@ class blockchain_predict:
     def __init__(self):
         self.load_config()
         global CONF
-        self.transation_fields           = CONF['TransactionFields']
+        self.transaction_fields           = CONF['TransactionFields']
         self.tps                         = CONF['BlockchainParameters']['TPS']
         self.batch_timeout               = CONF['BlockchainParameters']['BatchTimeout']
         self.max_message_count           = CONF['BlockchainParameters']['BatchSize']['MaxMessageCount']
@@ -26,18 +26,18 @@ class blockchain_predict:
         self.x_period                    = CONF['Predict']
         self.genesis_block_size          = CONF['BlockchainParameters']['GenesisBlockSize']
 
-        self.transation_size = self.calculate_transaction_size(self.transation_fields)
+        self.transaction_size = self.calculate_transaction_size(self.transaction_fields)
         self.total_transactions = self.calculate_total_transactions(self.tps,  self.batch_timeout)
-        self.size_total_transacoes = self.calculate_size_total_transacoes(self.total_transactions, self.transation_size)
+        self.size_total_transacoes = self.calculate_size_total_transacoes(self.total_transactions, self.transaction_size)
         self.block_size = self.calculate_block_size(self.block_header_size , self.block_metadata_size , self.size_total_transacoes)
         self.blockchain_size_gb = self.calculate_blockchain_size(self.x_period, self.batch_timeout, self.block_size, self.genesis_block_size)
         self.total_blocks = self.calculate_total_blocks(self.x_period, self.batch_timeout)
 
 
 
-    def calculate_transaction_size(self, transation_fields: list) -> int:
-        self.transation_size = transation_fields['H4'] + transation_fields['S4'] + transation_fields['P4'] + transation_fields['R4'] + transation_fields['E4']
-        return self.transation_size
+    def calculate_transaction_size(self, transaction_fields: list) -> int:
+        self.transaction_size = transaction_fields['H4'] + transaction_fields['S4'] + transaction_fields['P4'] + transaction_fields['R4'] + transaction_fields['E4']
+        return self.transaction_size
     
 
     def calculate_total_transactions(self, tps: int, batch_timeout: int) -> int:
@@ -49,8 +49,8 @@ class blockchain_predict:
         return self.total_transactions
 
 
-    def calculate_size_total_transacoes(self, total_transactions:int, transation_size:int) -> int:
-        self.size_total_transacoes = total_transactions * transation_size
+    def calculate_size_total_transacoes(self, total_transactions:int, transaction_size:int) -> int:
+        self.size_total_transacoes = total_transactions * transaction_size
         if self.size_total_transacoes > self.absolute_max_bytes:
             print('Undefined: size_total_transacoes > absolute_max_bytes')
             print('size_total_transacoes : ', self.size_total_transacoes)

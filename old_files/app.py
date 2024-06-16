@@ -18,7 +18,7 @@ blockchain = predict.blockchain_predict()
 cost = predict.cost_predict(blockchain.blockchain_size_gb)
 
 
-t_fields_config = blockchain.transation_fields
+t_fields_config = blockchain.transaction_fields
 
 
 t_fields_hmtl = []
