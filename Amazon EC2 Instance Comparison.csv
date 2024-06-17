@@ -1,12 +1,13 @@
-Name,API Name,Instance Memory,vCPUs,Instance Storage,Network Performance,On Demand
-C6A Large,c6a.large,4.0 GiB,2 vCPUs,EBS only,Up to 12.5 Gigabit,$0.0765 hourly
-C6A Extra Large,c6a.xlarge,8.0 GiB,4 vCPUs,EBS only,Up to 12.5 Gigabit,$0.1530 hourly
-C6A Double Extra Large,c6a.2xlarge,16.0 GiB,8 vCPUs,EBS only,Up to 12.5 Gigabit,$0.3060 hourly
-C6A Quadruple Extra Large,c6a.4xlarge,32.0 GiB,16 vCPUs,EBS only,Up to 12.5 Gigabit,$0.6120 hourly
-C6A Eight Extra Large,c6a.8xlarge,64.0 GiB,32 vCPUs,EBS only,12.5 Gigabit,$1.2240 hourly
-C6A 12xlarge,c6a.12xlarge,96.0 GiB,48 vCPUs,EBS only,18.75 Gigabit,$1.8360 hourly
-C6A 16xlarge,c6a.16xlarge,128.0 GiB,64 vCPUs,EBS only,25 Gigabit,$2.4480 hourly
-C6A 24xlarge,c6a.24xlarge,192.0 GiB,96 vCPUs,EBS only,37.5 Gigabit,$3.6720 hourly
-C6A 32xlarge,c6a.32xlarge,256.0 GiB,128 vCPUs,EBS only,50 Gigabit,$4.8960 hourly
-C6A 48xlarge,c6a.48xlarge,384.0 GiB,192 vCPUs,EBS only,50 Gigabit,$7.3440 hourly
-C6A Metal,c6a.metal,384.0 GiB,192 vCPUs,EBS only,50 Gigabit,$7.3440 hourly
+"Name","API Name","Instance Memory","vCPUs","Instance Storage","Network Performance","On Demand","Linux Reserved cost","Linux Spot Minimum cost","Windows On Demand cost","Windows Reserved cost"
+"C6A Large","c6a.large","4.0 GiB","2 vCPUs","EBS only","Up to 12.5 Gigabit","$0.1179 hourly","$0.0779 hourly","$0.0455 hourly","$0.2099 hourly","$0.1699 hourly"
+"C6A Extra Large","c6a.xlarge","8.0 GiB","4 vCPUs","EBS only","Up to 12.5 Gigabit","$0.2358 hourly","$0.1557 hourly","$0.1008 hourly","$0.4198 hourly","$0.3397 hourly"
+"C6A Double Extra Large","c6a.2xlarge","16.0 GiB","8 vCPUs","EBS only","Up to 12.5 Gigabit","$0.4716 hourly","$0.3115 hourly","$0.1907 hourly","$0.8396 hourly","$0.6795 hourly"
+"C6A Quadruple Extra Large","c6a.4xlarge","32.0 GiB","16 vCPUs","EBS only","Up to 12.5 Gigabit","$0.9432 hourly","$0.6229 hourly","$0.2370 hourly","$1.6792 hourly","$1.3589 hourly"
+"C6A Eight Extra Large","c6a.8xlarge","64.0 GiB","32 vCPUs","EBS only","12.5 Gigabit","$1.8864 hourly","$1.2459 hourly","$0.6570 hourly","$3.3584 hourly","$2.7179 hourly"
+"C6A 12xlarge","c6a.12xlarge","96.0 GiB","48 vCPUs","EBS only","18.75 Gigabit","$2.8296 hourly","$1.8688 hourly","$1.0714 hourly","$5.0376 hourly","$4.0768 hourly"
+"C6A 16xlarge","c6a.16xlarge","128.0 GiB","64 vCPUs","EBS only","25 Gigabit","$3.7728 hourly","$2.4918 hourly","$0.3789 hourly","$6.7168 hourly","$5.4358 hourly"
+"C6A 24xlarge","c6a.24xlarge","192.0 GiB","96 vCPUs","EBS only","37.5 Gigabit","$5.6592 hourly","$3.7377 hourly","$0.5695 hourly","$10.0752 hourly","$8.1537 hourly"
+"C6A 32xlarge","c6a.32xlarge","256.0 GiB","128 vCPUs","EBS only","50 Gigabit","$7.5456 hourly","$4.9836 hourly","$0.7561 hourly","$13.4336 hourly","$10.8715 hourly"
+"C6A 48xlarge","c6a.48xlarge","384.0 GiB","192 vCPUs","EBS only","50 Gigabit","$11.3184 hourly","$7.4753 hourly","$1.1324 hourly","$20.1504 hourly","$16.3073 hourly"
+"C6A Metal","c6a.metal","384.0 GiB","192 vCPUs","EBS only","50 Gigabit","$11.3184 hourly","$7.4753 hourly","$1.1336 hourly","$20.1504 hourly","$16.3073 hourly"
+"HPC6A 48xlarge","hpc6a.48xlarge","384.0 GiB","96 vCPUs","EBS only","100 Gigabit","unavailable","unavailable","unavailable","unavailable","unavailable"
