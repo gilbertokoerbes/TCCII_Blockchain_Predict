@@ -29,3 +29,4 @@ USER ${NB_UID}
 WORKDIR /home/jovyan/work
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt 
+COPY overrides.json /opt/conda/share/jupyter/lab/settings/
