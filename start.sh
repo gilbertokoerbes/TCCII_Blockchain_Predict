@@ -9,4 +9,4 @@ docker cp jupyter_lab:/home/jovyan/.local/share/jupyter/runtime/ ./runtime
 token=$(jq --raw-output '.token' ./runtime/jpserver-*.json)
 
 echo 'Link de acesso:'
-echo http://$DNS:80/lab?token=$token
+echo http://$DNS:80/notebooks/predict.ipynb?token=$token
