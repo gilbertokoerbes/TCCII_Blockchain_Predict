@@ -1,0 +1,13 @@
+Name,Instance Memory,vCPUs,Instance Storage,Network Performance,On Demand,Linux Reserved cost,Linux Spot Minimum cost,Windows On Demand cost,Windows Reserved cost
+c6a.large,4.0 GiB,2 vCPUs,EBS only,Up to 12.5 Gigabit,$0.1179 hourly,$0.0779 hourly,$0.0455 hourly,$0.2099 hourly,$0.1699 hourly
+c6a.xlarge,8.0 GiB,4 vCPUs,EBS only,Up to 12.5 Gigabit,$0.2358 hourly,$0.1557 hourly,$0.1008 hourly,$0.4198 hourly,$0.3397 hourly
+c6a.2xlarge,16.0 GiB,8 vCPUs,EBS only,Up to 12.5 Gigabit,$0.4716 hourly,$0.3115 hourly,$0.1907 hourly,$0.8396 hourly,$0.6795 hourly
+c6a.4xlarge,32.0 GiB,16 vCPUs,EBS only,Up to 12.5 Gigabit,$0.9432 hourly,$0.6229 hourly,$0.2370 hourly,$1.6792 hourly,$1.3589 hourly
+c6a.8xlarge,64.0 GiB,32 vCPUs,EBS only,12.5 Gigabit,$1.8864 hourly,$1.2459 hourly,$0.6570 hourly,$3.3584 hourly,$2.7179 hourly
+c6a.12xlarge,96.0 GiB,48 vCPUs,EBS only,18.75 Gigabit,$2.8296 hourly,$1.8688 hourly,$1.0714 hourly,$5.0376 hourly,$4.0768 hourly
+c6a.16xlarge,128.0 GiB,64 vCPUs,EBS only,25 Gigabit,$3.7728 hourly,$2.4918 hourly,$0.3789 hourly,$6.7168 hourly,$5.4358 hourly
+c6a.24xlarge,192.0 GiB,96 vCPUs,EBS only,37.5 Gigabit,$5.6592 hourly,$3.7377 hourly,$0.5695 hourly,$10.0752 hourly,$8.1537 hourly
+c6a.32xlarge,256.0 GiB,128 vCPUs,EBS only,50 Gigabit,$7.5456 hourly,$4.9836 hourly,$0.7561 hourly,$13.4336 hourly,$10.8715 hourly
+c6a.48xlarge,384.0 GiB,192 vCPUs,EBS only,50 Gigabit,$11.3184 hourly,$7.4753 hourly,$1.1324 hourly,$20.1504 hourly,$16.3073 hourly
+c6a.metal,384.0 GiB,192 vCPUs,EBS only,50 Gigabit,$11.3184 hourly,$7.4753 hourly,$1.1336 hourly,$20.1504 hourly,$16.3073 hourly
+hpc6a.48xlarge,384.0 GiB,96 vCPUs,EBS only,100 Gigabit,unavailable,unavailable,unavailable,unavailable,unavailable
