@@ -8,6 +8,7 @@ services:
       - "80:8888"
     environment: 
       - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_TOKEN=$JUPYTER_TOKEN_ENV
     #command: start-notebook.sh --NotebookApp.default_url=/notebooks/predict.ipynb
     volumes: 
       - .:/home/jovyan/work
